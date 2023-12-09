@@ -1,8 +1,14 @@
 package Set;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Student {
+public class Student<T> implements Comparable<T> {
+    @Override
+    public int compareTo(T o) {
+        return this.age;
+    }
+
     private int age;
     private String name;
 
@@ -10,6 +16,8 @@ public class Student {
         this.age = age;
         this.name = name;
 
+        +
+        . .
     }
 
     @Override
