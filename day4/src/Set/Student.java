@@ -3,10 +3,13 @@ package Set;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Student<T> implements Comparable<T> {
+public class Student<T> implements Comparable<Student> {
     @Override
-    public int compareTo(T o) {
-        return this.age;
+    public int compareTo(Student o) {
+        int ageResult = this.age - o.age;
+        int nameresult = ageResult == 0? o.name.compareTo(this.name) : ageResult;
+        int result = nameresult == 0 ? 1:nameresult;
+        return result;
     }
 
     private int age;
@@ -15,9 +18,6 @@ public class Student<T> implements Comparable<T> {
     public Student(int age, String name) {
         this.age = age;
         this.name = name;
-
-        +
-        . .
     }
 
     @Override
