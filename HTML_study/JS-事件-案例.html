@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见事件案例</title>
+</head>
+<body>
+    <img id="light" src="img/off.gif"> <br>
+    <input type="button" value="点亮" onclick="on()"> 
+    <input type="button"  value="熄灭" onclick="off()">
+
+    <br> <br>
+
+    <input type="text" id="name" value="ITCAST" onfocus="lower()" onblur="upper()">
+    <br> <br>
+
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+    <br>
+
+    <input type="button" value="全选" onclick="checkAll()"> 
+    <input type="button" value="反选" onclick="reverse()">
+
+    <script> 
+    function on(){
+        var img = document.getElementById('light');
+        img.src = "./img/on.gif";
+    }
+    function off(){
+        var img = document.getElementById('light');
+        img.src = "./img/off.gif";
+    }
+
+    function lower(){
+        var input = document.getElementById("name");
+        input.value = input.value.toLowerCase();
+
+    }
+    function upper(){
+        var input = document.getElementById("name");
+        input.value = input.value.toUpperCase();
+
+    }
+
+    function checkAll(){
+        var hobbys = document.getElementsByName("hobby");
+        for (let i = 0; i < hobbys.length; i++) {
+            const hobby = hobbys[i];
+            hobby.checked = true;
+        }
+
+    }
+    function reverse(){
+        var hobbys = document.getElementsByName("hobby");
+        for (let i = 0; i < hobbys.length; i++) {
+            const hobby = hobbys[i];
+            if (hobby.checked){
+                hobby.checked = false;
+            }
+            else{
+                hobby.checked = true;
+
+            }
+        }
+    }
+
+
+    </script>
+</body>
+</html>

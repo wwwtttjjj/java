@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // window.alert("JS");
+        // document.write("jS")
+        // console.log("JS")
+        // var a = 10;
+        // a = "张三";
+        // // alert(a);
+        // {
+        //     var x = 1;
+        //     var x = "a";
+        // }
+        // alert(x);
+                // alert(a);
+        // {
+        //     var x = 1;
+        // }
+        // let(局部) var（全局） const(不能改变) ==进行类型转换 ===不进行类型转化
+        // alert(x);
+        // var array = new Array(1,2,3,4)
+        // // console.log(arr)
+        // for (let index = 0; index < array.length; index++) {
+        //     console.log(array[index]);
+            
+        // }
+        // array.forEach(function(e){
+        //     console.log(e)
+        // })
+        // array.push(7,8,9)
+        // array.splice(1,1)//start and number
+        // array.forEach(e =>
+        //     console.log(e)
+        // )
+        var jsonStr = '{"name":"Tom","age":18,"addr":["beijing","shanghai","xian"]}';
+        alert(jsonStr.name)
+        //transfer
+        var obj = JSON.parse(jsonStr);
+        alert(obj.name);
+        alert(JSON.stringify(obj))
+
+    </script>
+    
+</body>
+</html>
